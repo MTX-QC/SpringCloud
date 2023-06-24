@@ -9,6 +9,7 @@
     <modules>
         <module>course-service</module>
         <module>eureka-service</module>
+        <module>course-zuul</module>
 
     </modules>
     <name>Spring-Cloud-Course-Practice</name>

@@ -2,6 +2,7 @@ package com.mtx.course.controller;
 
 import com.mtx.course.client.CourseListClient;
 import com.mtx.course.entity.Course;
+import com.mtx.course.entity.CourseAndPrice;
 import com.mtx.course.entity.CoursePrice;
 import com.mtx.course.service.CoursePriceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,4 +34,11 @@ public class CoursePriceController {
         List<Course> courses = courseListClient.courseList();
         return courses;
     }
+
+    @GetMapping("/coursesAndPrice")
+    public List<CourseAndPrice> getCoursesAndPrice() {
+        List<CourseAndPrice> coursesAndPrice = coursePriceService.getCoursesAndPrice();
+        return coursesAndPrice;
+    }
+
 }
